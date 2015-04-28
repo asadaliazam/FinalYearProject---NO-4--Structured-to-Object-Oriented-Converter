@@ -1,0 +1,38 @@
+  int add(int,int);
+  int subtract(int ,int );
+  int multiply(int , int );
+  int divide(int , int );
+  int minMax(int , int );
+  int modulus(int,int );
+---------------------------------
+void dummy(int);
+---------------------------------
+void main()
+  		result=add(variable1, variable2);
+  		result=subtract(variable1,variable2);
+  		result=divide(variable1,variable2);
+  		result=multiply(variable1,variable2);
+  		result=minMax(variable1,variable2);
+  		result=modulus(variable1, variable2);
+---------------------------------
+int add(int number1, int number2)
+  	dummy(number1);
+  	return (number1+number2);
+---------------------------------
+int subtract(int number1, int number2)
+  	return (number1-number2);
+---------------------------------
+int multiply(int number1, int number2)
+  	return (number1*number2);
+---------------------------------
+int divide(int number1, int number2)
+  	return (number1/number2);
+---------------------------------
+int minMax(int number1, int number2)
+  	return number1;
+  return number2;
+---------------------------------
+int modulus(int number1,int number2)
+  	return (number1%number2);
+---------------------------------
+void dummy(int dummyVariable)
