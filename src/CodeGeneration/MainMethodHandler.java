@@ -141,7 +141,7 @@ public class MainMethodHandler implements FileHandling {
                                     tokens=line.split(";");
                                     if (tokens.length>1)
                                     {for (int index=0;index<tokens.length;index++)
-                                        if (index==tokens.length-1)
+                                        if (index!=tokens.length-1)
                                            detectAssignments(tokens[index]+";");
                                     else
                                         detectAssignments(tokens[index]+";");

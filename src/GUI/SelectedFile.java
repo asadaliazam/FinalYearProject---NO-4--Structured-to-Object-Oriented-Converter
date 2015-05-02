@@ -75,14 +75,15 @@ public class SelectedFile extends javax.swing.JFrame implements ActionListener{
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("NO4");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Downloads\\Projectaaa\\NO4 (3)\\NO4 (3)\\Resources\\header.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\resources\\header.jpg")); // NOI18N
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Desktop\\strat_btn.png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\resources\\strat_btn.png")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);

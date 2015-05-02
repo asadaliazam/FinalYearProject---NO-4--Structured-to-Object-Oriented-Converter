@@ -45,12 +45,14 @@ public class menu extends javax.swing.JFrame implements ActionListener{
     Timer timer;
     private int check = 0;
     int projectSelected;
+    int fileSelected;
     
     public menu() {
         initComponents();
     }
     menu(ProjectController obj, String miniFile, String outputPath) {
         projectSelected = 0;
+        fileSelected = 0;
         this.miniFile = miniFile;
         this.outputPath = outputPath;
         projectControllerObject = obj;
@@ -85,6 +87,9 @@ public class menu extends javax.swing.JFrame implements ActionListener{
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jMenuBar = new javax.swing.JMenuBar();
         open = new javax.swing.JMenu();
         NewFile = new javax.swing.JMenuItem();
@@ -126,19 +131,18 @@ public class menu extends javax.swing.JFrame implements ActionListener{
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("NO4");
 
-        startButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Desktop\\unnamed.png")); // NOI18N
-        startButton.setText("");
+        startButton.setIcon(new javax.swing.ImageIcon("C:\\resources\\unnamed.png")); // NOI18N
         startButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 startButtonActionPerformed(evt);
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Downloads\\Projectaaa\\NO4 (3)\\NO4 (3)\\Resources\\header.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\resources\\header.jpg")); // NOI18N
 
         jLabel4.setText("Input File");
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Desktop\\NextButton.jpg")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\resources\\NextButton.jpg")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -147,21 +151,30 @@ public class menu extends javax.swing.JFrame implements ActionListener{
 
         jScrollPane2.setViewportView(jTextPane2);
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel1.setText("Before Uploading File please make sure:");
+        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setText("Before uploading file please make sure:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel3.setText("- The code is built through structured programming.");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel5.setText("- The code is programmed in C/C++.");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel6.setText("- The code is free of syntax errors.");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 51, 51));
         jLabel8.setText("Warning : Please make sure you have a backup available.");
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setText("Steps to run the program:");
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel10.setText("1. Make a new project (File -> New Project) and specify path for output files.");
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel11.setText("2. Select Input File (File -> Open File)");
 
         jMenuBar.setForeground(new java.awt.Color(51, 51, 255));
 
@@ -175,7 +188,7 @@ public class menu extends javax.swing.JFrame implements ActionListener{
         });
 
         NewFile.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
-        NewFile.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Downloads\\Projectaaa\\NO4 (3)\\NO4 (3)\\Resources\\Actions-project-open-icon.png")); // NOI18N
+        NewFile.setIcon(new javax.swing.ImageIcon("C:\\resources\\Actions-project-open-icon.png")); // NOI18N
         NewFile.setText("New Project");
         NewFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -185,7 +198,7 @@ public class menu extends javax.swing.JFrame implements ActionListener{
         open.add(NewFile);
 
         Open.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
-        Open.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Downloads\\Projectaaa\\NO4 (3)\\NO4 (3)\\Resources\\images.jpg")); // NOI18N
+        Open.setIcon(new javax.swing.ImageIcon("C:\\resources\\images.jpg")); // NOI18N
         Open.setText("Open File");
         Open.setMaximumSize(new java.awt.Dimension(40000, 32767));
         Open.addActionListener(new java.awt.event.ActionListener() {
@@ -196,7 +209,7 @@ public class menu extends javax.swing.JFrame implements ActionListener{
         open.add(Open);
 
         Clear.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.CTRL_MASK));
-        Clear.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Downloads\\Projectaaa\\NO4 (3)\\NO4 (3)\\Resources\\Broom_icon.png")); // NOI18N
+        Clear.setIcon(new javax.swing.ImageIcon("C:\\resources\\Broom_icon.png")); // NOI18N
         Clear.setText("Clear");
         Clear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -206,7 +219,7 @@ public class menu extends javax.swing.JFrame implements ActionListener{
         open.add(Clear);
 
         exit.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
-        exit.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Downloads\\Projectaaa\\NO4 (3)\\NO4 (3)\\Resources\\Delete.png")); // NOI18N
+        exit.setIcon(new javax.swing.ImageIcon("C:\\resources\\Delete.png")); // NOI18N
         exit.setText("Exit");
         exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +232,7 @@ public class menu extends javax.swing.JFrame implements ActionListener{
 
         jMenu2.setText("Help");
 
-        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Downloads\\Projectaaa\\NO4 (3)\\NO4 (3)\\Resources\\Actions-help-about-icon.png")); // NOI18N
+        jMenuItem1.setIcon(new javax.swing.ImageIcon("C:\\resources\\Actions-help-about-icon.png")); // NOI18N
         jMenuItem1.setText("About");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,36 +266,54 @@ public class menu extends javax.swing.JFrame implements ActionListener{
                                 .addContainerGap()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 625, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel1)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel5)
-                                            .addComponent(jLabel3)
-                                            .addComponent(jLabel6)
-                                            .addComponent(jLabel7)
-                                            .addComponent(jLabel8)))
+                                            .addComponent(jLabel1)
+                                            .addComponent(jLabel9)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addComponent(jLabel5)
+                                                    .addComponent(jLabel3)
+                                                    .addComponent(jLabel6)
+                                                    .addComponent(jLabel10)
+                                                    .addComponent(jLabel11))))
+                                        .addGap(35, 35, 35)
+                                        .addComponent(jLabel7))
                                     .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel8)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addComponent(jLabel1)
-                .addGap(33, 33, 33)
-                .addComponent(jLabel3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(177, 177, 177)
+                        .addComponent(jLabel7))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel1)
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel6)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel8)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel9)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5)
+                .addComponent(jLabel10)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
-                .addGap(51, 51, 51)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -315,6 +346,7 @@ public class menu extends javax.swing.JFrame implements ActionListener{
                     {
                         try 
                         {
+                            fileSelected=1;
                             Scanner fin = new Scanner(chooser.getSelectedFile());
                             String buffer = "";
                             while (fin.hasNext())
@@ -394,6 +426,7 @@ public class menu extends javax.swing.JFrame implements ActionListener{
                     {
                         try 
                         {
+                            fileSelected=1;
                             Scanner fin = new Scanner(chooser.getSelectedFile());
                             String buffer = "";
                             while (fin.hasNext())
@@ -433,7 +466,17 @@ public class menu extends javax.swing.JFrame implements ActionListener{
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        timer.start();
+        if (fileSelected == 1 && projectSelected == 1)
+        {
+            timer.start();
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(this,
+    "Specify project and file path first ",
+    "Error",
+    JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
     public void actionPerformed (ActionEvent e) {
       Random rand = new Random();  
@@ -503,6 +546,8 @@ public class menu extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JFrame jFrame1;
     private javax.swing.JFrame jFrame2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -510,6 +555,7 @@ public class menu extends javax.swing.JFrame implements ActionListener{
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar;
     private javax.swing.JMenuItem jMenuItem1;

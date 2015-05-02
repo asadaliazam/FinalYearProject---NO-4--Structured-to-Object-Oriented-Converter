@@ -5,6 +5,7 @@
  */
 package CodeGeneration;
 
+import ClassDiagram.Attributes;
 import ClassDiagram.CandidateClass;
 import ClassDiagram.ClassIdentifier;
 import java.io.BufferedReader;
@@ -73,6 +74,8 @@ public class GlobalVariableDetector implements FileHandling {
         
         candidateClassList=classIdentifier.getCandidateClassList();
         String tokens[];
+        String tokens2[];
+        Attributes attributes;
         for (int index=0;index<globalVariablesList.size();index++)
         {
             tokens=globalVariablesList.get(index).split("\\s+");
@@ -81,7 +84,13 @@ public class GlobalVariableDetector implements FileHandling {
             {
                 for (int x=0;x<candidateClassList.size();x++)
                 {
-                    candidateClassList.get(x).addAttribute(globalVariablesList.get(index),0);
+                    tokens2=globalVariablesList.get(index).split("\\s+");
+                    attributes=new Attributes(tokens[1],tokens[0]);
+                    if (!candidateClassList.get(x).getAttributesList().contains(attributes))
+                    {//System.out.println(tokens[1]);
+                        candidateClassList.get(x).addAttribute(globalVariablesList.get(index),0);
+                    
+                    }
                 }
             }
             else

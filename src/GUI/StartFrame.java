@@ -61,7 +61,7 @@ public class StartFrame extends javax.swing.JFrame implements ActionListener{
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Splash Screen");
+        setTitle("NO4");
         setBackground(new java.awt.Color(255, 204, 204));
         setForeground(new java.awt.Color(51, 255, 51));
 
@@ -75,7 +75,7 @@ public class StartFrame extends javax.swing.JFrame implements ActionListener{
         progressBar.setName(""); // NOI18N
         progressBar.setOpaque(true);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Downloads\\Projectaaa\\NO4 (3)\\NO4 (3)\\Resources\\header.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\resources\\header.jpg")); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 2, 18)); // NOI18N
         jLabel4.setText("Making Programmer's Life Better");

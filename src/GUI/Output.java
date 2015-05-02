@@ -139,6 +139,7 @@ public class Output extends javax.swing.JFrame implements ActionListener{
         jMenuBar1.add(jMenu2);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("NO4");
 
         jTabbedPane1.setFont(new java.awt.Font("David", 1, 14)); // NOI18N
 
@@ -161,7 +162,7 @@ public class Output extends javax.swing.JFrame implements ActionListener{
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("          DFD          ", jPanel1);
+        jTabbedPane1.addTab("   Dataflow Log  ", jPanel1);
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -197,16 +198,16 @@ public class Output extends javax.swing.JFrame implements ActionListener{
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("  Class Diagram  ", jPanel3);
+        jTabbedPane1.addTab("Class Diagram Log ", jPanel3);
 
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Downloads\\button (6).png")); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon("C:\\resources\\button (6).png")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Downloads\\Projectaaa\\NO4 (3)\\NO4 (3)\\Resources\\header.jpg")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\resources\\header.jpg")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -241,7 +242,7 @@ public class Output extends javax.swing.JFrame implements ActionListener{
                 .addComponent(progressBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jTabbedPane1.getAccessibleContext().setAccessibleName("DFD");
+        jTabbedPane1.getAccessibleContext().setAccessibleName("Dataflow Log");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

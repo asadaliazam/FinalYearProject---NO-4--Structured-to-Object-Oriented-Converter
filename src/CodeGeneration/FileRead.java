@@ -193,6 +193,10 @@ public void readFile() throws FileNotFoundException, IOException
         List<String> funcDeclaration = new ArrayList<String>();
         //int counter= 0;
         //int funcStart = 0;
+        for (String s:functionList)
+        {
+            System.out.println(s);
+        }
         
 
         String line;
@@ -249,7 +253,7 @@ public void readFile() throws FileNotFoundException, IOException
                         start = 0;
                         break;
                     }
-                    line = matchLineWithFunctionCall(line);
+                    line = matchLineWithFunctionCall(line,functionList.get(i));
                     funcDeclaration.add(line);
                 }
                     //System.out.println(funcList.get(i));
@@ -415,8 +419,9 @@ public void readFile() throws FileNotFoundException, IOException
         
     }
 
-    private String matchLineWithFunctionCall(String line) 
+    private String matchLineWithFunctionCall(String line,String functionInWhichIam) 
     {
+        int a =0;
         //List<String> funcCallList = new ArrayList<>();
         //funcCallList.add("gotoxy");
         //funcCallList.add("");
@@ -426,8 +431,12 @@ public void readFile() throws FileNotFoundException, IOException
             
             if (line.contains(funcList.get(i)))
             {
+                if (functionInWhichIam.contains(funcList.get(i)))
+                {
+                    a=1;
+                }
         
-                String functionCallregex="(\\w+)\\s*[(](s*\\w+(.*))([,]s*\\w+(.*))*s*[)]s*;";
+                String functionCallregex="(\\w+)\\s*[(](s*\\w+(.*))([,]s*\\w+(.*))*s*[)]s*";
                 Pattern functionCallPattern=Pattern.compile(functionCallregex);
                 Matcher functionCallMatcher=null;
         
@@ -435,12 +444,16 @@ public void readFile() throws FileNotFoundException, IOException
                         
                            if (functionCallMatcher.find())
                            {
-                               String tokens[]=line.split("(\\w+\\s*[(]s*\\w+(.*)([,]s*\\w+(.*))*s*[)]s*)");
-                               
+                               //String tokens[]=line.split("\\w+\\s*[(]s*\\w+(.*)([,]s*\\w+(.*))*s*[)]s*");
+                               String tokens[] = line.split(funcList.get(i));
+                               System.out.println(funcList.get(i)+"111");
+                               System.out.println(tokens[0]+"0");
+                               System.out.println(tokens[1]+"1");
                                String statementBeforeFunction = tokens[0]; // prints text behind the function
-                               String functionCall = functionCallMatcher.group(0);// prints the function
-                               String classNameFromFunction = appendClassNameWithFunctionCallForFunction(functionCall);
-                               String returnString = statementBeforeFunction.concat(classNameFromFunction).concat(functionCall);
+                               //String functionCall = functionCallMatcher.group(a);// prints the function
+                               //System.out.println(functionCall+"---------------------");
+                               String classNameFromFunction = appendClassNameWithFunctionCallForFunction(funcList.get(i));
+                               String returnString = statementBeforeFunction.concat(classNameFromFunction).concat(funcList.get(i)).concat(tokens[1]);
                                //System.out.println(tokens[1]); //prints text after the function
                                //line="boo";
                                return returnString;
@@ -453,9 +466,11 @@ public void readFile() throws FileNotFoundException, IOException
     
     public String appendClassNameWithFunctionCallForFunction(String funcName) 
     {
-        
+        String clasName = null;
         List<String> className = getClassFromFunction(funcName);
-        String clasName = className.get(0);
+       
+        clasName = className.get(0);
+        
         //System.out.println(clasName);
         String definition = clasName.concat(" ");
         definition = definition.concat(clasName+"Object");

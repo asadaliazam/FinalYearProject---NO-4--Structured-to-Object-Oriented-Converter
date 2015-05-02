@@ -66,7 +66,7 @@ public class ObjectOrientedCodeFrame extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Object Oriented Code");
+        setTitle("NO4");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);

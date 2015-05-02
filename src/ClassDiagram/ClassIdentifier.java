@@ -128,6 +128,10 @@ public void printPublicClassesList()
                 candidateClassList.add(candidateClass);
                 candidateClass.addMethod(functionsReturnTypeTable.get(entry.getKey())+" "+entry.getKey()+"( )");
                  allFunctionsList.add(functionsReturnTypeTable.get(entry.getKey())+" "+entry.getKey()+"( )");
+                 
+                 classNameList=new ArrayList<String>();
+                            classNameList.add(entry.getKey()+"Class");
+                            functionsClassesTable.put(entry.getKey(),classNameList);
                   }
                   
                   }

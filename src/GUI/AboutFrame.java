@@ -40,8 +40,9 @@ public class AboutFrame extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("About");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Asad\\Desktop\\About.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\resources\\About.png")); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("NO4");
