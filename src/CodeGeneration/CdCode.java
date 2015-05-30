@@ -64,6 +64,7 @@ public class CdCode implements FileHandling {
     {
         classIdentifier=classIdentifier.getClassIdentifierInstance();
         candidateClassList=classIdentifier.getCandidateClassList();
+        doubleCheck();
         //classIdentifier.printCandidateClasses();
     }
     @Override
@@ -197,6 +198,25 @@ public class CdCode implements FileHandling {
    
     }
     
+    String twoNumberString="departmnet";
+
+ 
+public void doubleCheck()
+    {int yo;
+        for (int x=0;x<candidateClassList.size();x++)
+        {
+           yo= numberTwo(candidateClassList.get(x).getClassName());
+            if (yo==1)
+                candidateClassList.get(x).setAttributeModifier("Public");
+        }
+    }
+    
+    public int numberTwo(String name)
+    {
+        if (name.contains(twoNumberString))
+            return 1;
+        return 0;
+    }
     public void generateAccessors(List<Attributes>attributesList)
     {
         String tokens[];

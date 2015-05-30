@@ -23,7 +23,7 @@ import java.util.regex.Pattern;
  */
 public class MainMethodHandler implements FileHandling {
     
-    private String mainMethodRegex="void\\s+main";
+    private String mainMethodRegex="int\\s+main";
     private String equaltoOperatorRegex="(.*)[=](.*)[;]";
    // private String dotOperatorregex="(\\w+([[]\\d*\\w*\\[]])*)\\.(w+([[]\\d*\\w*\\[]])*)";
     private String dotOperatorregex="(.*)[.](.*)";
@@ -144,7 +144,7 @@ public class MainMethodHandler implements FileHandling {
                                         if (index!=tokens.length-1)
                                            detectAssignments(tokens[index]+";");
                                     else
-                                        detectAssignments(tokens[index]+";");
+                                        detectAssignments(tokens[index]+"");
                                     
                                     
                                     }
@@ -171,7 +171,7 @@ public class MainMethodHandler implements FileHandling {
            // getAndWriteGlobalVariables();
       //  counter=false;
         Pattern strcpyPattern=Pattern.compile(strcpyregex);
-        Matcher strcpyMatcher=strcpyPattern.matcher(line);
+        Matcher strcpyMatcher=strcpyPattern.matcher(line+";");
         
         boolean leftFlag;
         boolean rightFlag;

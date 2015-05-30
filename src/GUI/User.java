@@ -6,7 +6,7 @@
 package GUI;
 
 import CodeGeneration.FileHandling;
-import CodeGeneration.FileRead;
+import CodeGeneration.MainAndFunctionCompatibility;
 import CodeGeneration.umlFile;
 import DataFlowDiagram.NO4;
 
@@ -57,7 +57,7 @@ public class User {
         //no4Controller.classIdentification(outputPath);
         //no4Controller.generateCode(miniFile,outputPath);
         
-        //FileRead fileReadObject = new FileRead(miniFile, outputPath);
+        //FileRead fileReadObject = new MainAndFunctionCompatibility(miniFile, outputPath);
         //fileReadObject.readFile();
         //fileReadObject.functionWriter();
         

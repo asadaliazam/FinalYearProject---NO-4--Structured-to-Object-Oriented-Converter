@@ -15,7 +15,7 @@ public interface FileHandling {
   String oocFile="ooc.txt";
   String finalFile="C:\\Users\\Umair Khan\\Desktop\\finalCode.txt";
   String abcFile="C:\\Users\\Umair Khan\\Desktop\\abc.cpp";
-  String umlFile="C:\\Users\\Asad\\workspace\\NO4\\uml.txt";
+  String umlFile="C:\\Users\\Umair Khan\\Desktop\\uml.txt";
   
 
   
